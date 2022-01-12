@@ -42,7 +42,7 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "prettier --config .prettierrc --write",
+      "eslint --fix",
       "git add"
     ]
   }
