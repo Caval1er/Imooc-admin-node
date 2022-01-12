@@ -3,5 +3,3 @@
  */
 const mongoose = require('mongoose')
 const config = require('./index')
-
-mongoose.connect('')
