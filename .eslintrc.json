@@ -2,15 +2,17 @@
   "extends": ["airbnb", "prettier"],
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": [
-      "warn",
-      {
-        "singleQuote": true,
-        "semi": false,
-        "trailingComma": "none",
-        "endOfLine": "auto"
-      }
-    ],
+    // "quotes":["error","single"],
+    // "prettier/prettier": [
+    //   "warn",
+    //   {
+    //     "singleQuote": true,
+    //     "semi": false,
+    //     "trailingComma": "none",
+    //     "endOfLine": "auto"
+    //   }
+    // ],
+    "prettier/prettier":"error",
     "prefer-template": "off",
     "no-path-concat": "off"
   }

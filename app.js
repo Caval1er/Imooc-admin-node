@@ -1,21 +1,13 @@
 const Koa = require('koa')
 
 const app = new Koa()
-
 const views = require('koa-views')
-
 const json = require('koa-json')
-
 const onerror = require('koa-onerror')
-
 const bodyparser = require('koa-bodyparser')
-
 const logger = require('koa-logger')
-
 const log4js = require('./utils/log4j')
-
 const index = require('./routes/index')
-
 const users = require('./routes/users')
 // error handler
 onerror(app)
