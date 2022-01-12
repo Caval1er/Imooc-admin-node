@@ -45,3 +45,6 @@ app.on('error', (err, ctx) => {
 })
 
 module.exports = app
+
+const a = '5'
+console.log(a)
