@@ -25,6 +25,7 @@
     "pug": "^2.0.3"
   },
   "devDependencies": {
+    "cz-customizable": "^6.3.0",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-node": "^4.1.0",
@@ -40,13 +41,15 @@
     "nodemon": "^1.19.1",
     "prettier": "^2.5.1"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
   "lint-staged": {
     "*.{js,jsx}": [
       "eslint --fix",
       "git add"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
   }
 }

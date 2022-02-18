@@ -2,8 +2,11 @@
   "extends": ["airbnb", "prettier"],
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier":"error",
+    "prettier/prettier": "error",
+    "no-param-reassign": "off",
     "prefer-template": "off",
-    "no-path-concat": "off"
+    "no-path-concat": "off",
+    "no-use-before-define": "off",
+    "no-console": "off"
   }
 }

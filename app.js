@@ -7,11 +7,10 @@ const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
 const log4js = require('./utils/log4j')
-const index = require('./routes/index')
 const users = require('./routes/users')
 // error handler
 onerror(app)
-
+require('./config/db')
 // middlewares
 app.use(
   bodyparser({
@@ -35,16 +34,11 @@ app.use(async (ctx, next) => {
 })
 
 // routes
-app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods())
 
 // error-handling
-app.on('error', (err, ctx) => {
-  console.error('server error', err, ctx)
+app.on('error', (err) => {
   log4js.error(`${err.stack}`)
 })
 
 module.exports = app
-
-const a = '5'
-console.log(a)
